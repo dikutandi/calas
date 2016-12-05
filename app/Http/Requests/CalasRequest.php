@@ -26,12 +26,12 @@ class CalasRequest extends FormRequest
         return [
             'npm'       => 'required|max:25|unique:users_calas',
             'kelas'     => 'required|max:5',
-            'lab_minat' => 'required',
+            //'lab_minat' => 'required',
             'alamat'    => 'required',
             'contact'   => 'required|numeric',
             'ipk_utama' => 'required|between:0,4.00',
             'ipk_lokal' => 'required|between:0,4.00',
-            'cv'        => 'required|max:10000|mimes:zip,rar,7z',
+            'cv'        => 'required|max:10000|mimes:pdf',
         ];
     }
 }

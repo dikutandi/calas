@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="form-group{{ $errors->has('lab_minat') ? ' has-error' : '' }}">
+            <!-- <div class="form-group{{ $errors->has('lab_minat') ? ' has-error' : '' }}">
                 <label for="name" class="col-md-2 control-label">Lab-Minat</label>
 
                 <div class="col-md-5">
@@ -97,7 +97,7 @@
                         </span>
                     @endif
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-group{{ $errors->has('contact') ? ' has-error' : '' }}">
                 <label for="name" class="col-md-2 control-label">No HP</label>
@@ -139,7 +139,7 @@
                         <input id="fileupload" type="file" name="cv" >
                     </span>
 
-                    <span class="help-block" style="color: #a94442">Format diterima hanya .zip/.rar</span>
+                    <span class="help-block" style="color: #a94442">Format diterima hanya .pdf</span>
 
                     @if ($errors->has('cv'))
                         <span class="help-block">

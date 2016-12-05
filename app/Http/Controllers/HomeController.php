@@ -63,7 +63,7 @@ class HomeController extends Controller
             'npm'       => $request->get('npm'),
             'kelas'     => $request->get('kelas'),
             'alamat'    => $request->get('alamat'),
-            'lab_minat' => $request->get('lab_minat'),
+            //'lab_minat' => $request->get('lab_minat'),
             'contact'   => $request->get('contact'),
             'ipk_utama' => $request->get('ipk_utama'),
             'ipk_lokal' => $request->get('ipk_lokal'),
