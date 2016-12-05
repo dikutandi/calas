@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Auth;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -30,5 +31,10 @@ class User extends Authenticatable
     public function Calas()
     {
         return $this->hasOne(\App\Calas::class, 'userid');
+    }
+
+    public function hasRole($role)
+    {
+        return Auth::user()->roles == $role ? true : false;
     }
 }

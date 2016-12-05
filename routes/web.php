@@ -18,6 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 Route::post('/calas', 'HomeController@storeCalas');
+Route::post('/project', 'HomeController@storeProject');
+
+Route::group(['prefix' => 'lepkom-admin'], function () {
+
+    //Halaman yang bisa dibuka oleh semua admin
+
+    Route::group(['middleware' => ['auth', 'admin']], function () {
+        Route::get('/home', 'Admin\DashboardController@index');
+    });
+});
 
 Route::post('/upload/zip', 'UploadController@storeZip');
+Route::get('download', 'HomeController@download');

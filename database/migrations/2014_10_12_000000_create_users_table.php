@@ -35,6 +35,10 @@ class CreateUsersTable extends Migration
             $table->decimal('ipk_lokal', 10, 2)->nullable();
             $table->string('cv');
 
+            $table->string('project_name')->nullable();
+            $table->string('project_desc')->nullable();
+            $table->string('project_ppt')->nullable();
+
             $table->timestamps();
 
             $table->foreign('userid')->references('id')->on('users');

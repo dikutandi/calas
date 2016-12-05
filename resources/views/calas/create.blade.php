@@ -85,6 +85,20 @@
                 </div>
             </div>
 
+            <div class="form-group{{ $errors->has('lab_minat') ? ' has-error' : '' }}">
+                <label for="name" class="col-md-2 control-label">Lab-Minat</label>
+
+                <div class="col-md-5">
+                    {{ Form::select('lab_minat', $lab_minat, isset($calas->lab_minat) ? $calas->lab_minat : old('lab_minat') , ['class'=> 'form-control', 'placeholder' => 'Pilih salah satu']) }}
+
+                    @if ($errors->has('lab_minat'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('lab_minat') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+
             <div class="form-group{{ $errors->has('contact') ? ' has-error' : '' }}">
                 <label for="name" class="col-md-2 control-label">No HP</label>
 

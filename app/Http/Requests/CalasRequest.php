@@ -24,8 +24,9 @@ class CalasRequest extends FormRequest
     public function rules()
     {
         return [
-            'npm'       => 'required',
-            'kelas'     => 'required',
+            'npm'       => 'required|max:25|unique:users_calas',
+            'kelas'     => 'required|max:5',
+            'lab_minat' => 'required',
             'alamat'    => 'required',
             'contact'   => 'required|numeric',
             'ipk_utama' => 'required|between:0,4.00',

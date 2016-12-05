@@ -13,7 +13,7 @@ class TugasRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class TugasRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'project_name' => 'required|max:155|min:10',
+            'project_desc' => 'required|min:25',
+            'project_ppt'  => 'required|max:10000|mimes:ppt,pptx',
         ];
     }
 }
