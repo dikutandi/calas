@@ -13,8 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         $user = \App\User::create([
             'name'               => 'iniadmin',
-            'email'              => 'admin@lepkom.gunadarma.ac.id',
-            'password'           => bcrypt("lepkombisa"),
+            'email'              => 'admin@admin.com',
+            'password'           => bcrypt("adminbisa"),
             'roles'              => 'admin',
             'confirmation_token' => '111111111',
             'confirmed_at'       => \Carbon\Carbon::now(),
