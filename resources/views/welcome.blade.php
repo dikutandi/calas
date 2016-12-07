@@ -49,7 +49,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 44px;
             }
 
             .links > a {
@@ -85,7 +85,7 @@
             @endif
 
             <div class="content"  style="color: #1ABC9C; font-weight:bolder">
-                <div class="m-b-md" style="    font-size: -webkit-xxx-large;">
+                <div class="m-b-md title">
                     Pendaftaran Calon Asisten Lepkom Gunadarma <br>Tahun 2016 Lab. E-Commerce
                 </div>
 
@@ -103,10 +103,14 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
+                                <h4 class="modal-title">Persyaratan Administratif</h4>
                             </div>
                         <div class="modal-body">
-                          <p>Some text in the modal.</p>
+                          <ul>
+                                <li>Minimal Semester 3</li>
+                                <li>Membuat surat lamaran, DNS, CV, dan Foto (di jadikan satu dalam format PDF maksimal 10mb)</li>
+                                <li>Diutamakan Jurusan SI, SK, MI, TK, TI</li>
+                            </ul>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -127,7 +131,7 @@
                         <div class="modal-body" style="text-align: left;">
                             <ul>
                                 <li>Login ke akun anda <a href="{{ url('/login') }}" target="_BLANK">di sini</a></li> atau Registrasi untuk mendapatkan akun <a href="{{ url('/register') }}" target="_BLANK">di sini</a></li>
-                                <li>Lengkapi Profile Anda dan Upload CV anda dengan format zip yang berisi semua persyaratan adminstratif</li>
+                                <li>Lengkapi Profile Anda dan Upload CV anda dengan format .pdf yang berisi semua persyaratan adminstratif</li>
                                 <li>Buat sebuah Project(aplikasi) yang berhubungan dengan E-Commerce</li>
                                 <li>Buat file presentasi (.ppt/.pptx) upload di halaman home Calas (calon asisten)</li>
                                 <li>Pihak Lepkom akan menghubungi peserta Calon Asisten yang lolos tahap seleksi 1 untuk mengikuti test presentasi dan wawancara</li>

@@ -136,7 +136,7 @@
                         <i class="glyphicon glyphicon-plus"></i>
                         <span>Select files...</span>
                         <!-- The file input field used as target for the file upload widget -->
-                        <input id="fileupload" type="file" name="cv" >
+                        <input id="fileupload" type="file" name="cv" value="{{ old('cv') }}">
                     </span>
 
                     <span class="help-block" style="color: #a94442">Format diterima hanya .pdf</span>

@@ -14,7 +14,7 @@ class CreateTugasCalas extends Migration
     public function up()
     {
         Schema::table('users_calas', function (Blueprint $table) {
-            $table->string('lab_minat', 100);
+            $table->string('lab_minat', 100)->nullable();
         });
     }
 
@@ -25,6 +25,9 @@ class CreateTugasCalas extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users_calas', function (Blueprint $table) {
+            $table->dropColumn(['lab_minat']);
+        });
+
     }
 }

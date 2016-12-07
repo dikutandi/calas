@@ -78,9 +78,9 @@
                     <table class="table table-bordered">
                         <tr>
                             <th width="10%" style="background-color: #eee">NPM(Kelas)</th>
-                            <th width="20%"  style="background-color: #eee">Nama</th>
-                            <th width="10%"  style="background-color: #eee">IPK</th>
-                            <th width="10%"  style="background-color: #eee">No Hp</th>
+                            <th width="15%"  style="background-color: #eee">Nama</th>
+                            <th width="8%"  style="background-color: #eee">IPK</th>
+                            <th width="15%"  style="background-color: #eee">No Hp & Alamat</th>
                             <th width="20%"  style="background-color: #eee">Project</th>
                             <th width="10%"  style="background-color: #eee">File</th>
                             <th width="5%"  style="background-color: #eee">Action</th>
@@ -97,13 +97,17 @@
 
                                 </td>
                                 <td>
-                                    {{ $user->calas->contact }}
+                                    {{ $user->calas->contact }} <br>
+                                    {{ $user->calas->alamat }} <br>
                                 </td>
-                                <td>{{ $user->calas->project_name }}</td>
                                 <td>
-                                    <a href="{{ url('/download?file='.$user->calas->cv) }}">Curriculum Vitae</a> <br>
+                                    {{ $user->calas->project_name }}<br>
+                                    {{ $user->calas->project_desc }}
+                                </td>
+                                <td>
+                                    <a target="_BLANK" href="{{ url(.$user->calas->cv) }}" >Curriculum Vitae</a> <br>
                                     @if($user->calas->project_ppt != null)
-                                        <a href="{{ url('/download?file='.$user->calas->project_ppt) }}">PPT Project</a> <br>
+                                        <a target="_BLANK" href="{{ url($user->calas->project_ppt) }}">PPT Project</a> <br>
                                     @endif
                                 </td>
                                 <td>
