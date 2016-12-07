@@ -105,7 +105,7 @@
                                     {{ $user->calas->project_desc }}
                                 </td>
                                 <td>
-                                    <a target="_BLANK" href="{{ url(.$user->calas->cv) }}" >Curriculum Vitae</a> <br>
+                                    <a target="_BLANK" href="{{ url($user->calas->cv) }}" >Curriculum Vitae</a> <br>
                                     @if($user->calas->project_ppt != null)
                                         <a target="_BLANK" href="{{ url($user->calas->project_ppt) }}">PPT Project</a> <br>
                                     @endif
