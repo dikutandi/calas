@@ -139,13 +139,14 @@
                         <input id="fileupload" type="file" name="cv" value="{{ old('cv') }}">
                     </span>
 
-                    <span class="help-block" style="color: #a94442">Format diterima hanya .pdf</span>
 
                     @if ($errors->has('cv'))
                         <span class="help-block">
                             <strong>{{ $errors->first('cv') }}</strong>
                         </span>
                     @endif
+                    <span class="help-block" style="color: blue">Format diterima hanya .pdf Contoh file yang diupload bisa dilihat dilink <a target="_BLANK" href="{{ url('cv.pdf') }}">berikut {{ url('cv.pdf') }}</span>
+
                 </div>
             </div>
 

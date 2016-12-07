@@ -5,8 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
+        <title>Pendaftaran Online Calon Asisten Lepkom Tahun 2016 - Lab E-Commerce</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -98,17 +97,18 @@
 
                 <!-- Modal -->
                 <div class="modal fade" id="syarat" role="dialog">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog" >
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Persyaratan Administratif</h4>
                             </div>
-                        <div class="modal-body">
+                        <div class="modal-body" style="text-align: left;">
                           <ul>
                                 <li>Minimal Semester 3</li>
                                 <li>Membuat surat lamaran, DNS, CV, dan Foto (di jadikan satu dalam format PDF maksimal 10mb)</li>
+                                <li>Contoh file yang diupload bisa dilihat dilink <a target="_BLANK" href="{{ url('cv.pdf') }}">berikut {{ url('cv.pdf') }}</a></li>
                                 <li>Diutamakan Jurusan SI, SK, MI, TK, TI</li>
                             </ul>
                         </div>
