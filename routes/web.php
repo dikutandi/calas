@@ -22,6 +22,12 @@ Route::get('/home', 'HomeController@index');
 Route::post('/calas', 'HomeController@storeCalas');
 Route::post('/project', 'HomeController@storeProject');
 
+Route::get('/profile/edit', 'HomeController@editProfile');
+Route::post('/profile/edit', 'HomeController@postEditProfile');
+
+Route::get('/project/edit', 'HomeController@editProject');
+Route::post('/project/edit', 'HomeController@postEditProject');
+
 Route::group(['prefix' => 'lepkom-admin'], function () {
 
     //Halaman yang bisa dibuka oleh semua admin

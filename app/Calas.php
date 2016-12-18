@@ -9,7 +9,7 @@ class Calas extends Model
     protected $table = 'users_calas';
 
     protected $fillable = [
-        'userid', 'npm', 'kelas', 'alamat', 'contact', 'ipk_utama', 'ipk_lokal', 'cv', 'lab_minat',
+        'userid', 'npm', 'kelas', 'alamat', 'contact', 'ipk_utama', 'ipk_lokal', 'cv', 'lab_minat', 'is_gagal', 'last_status',
     ];
 
     public function User()

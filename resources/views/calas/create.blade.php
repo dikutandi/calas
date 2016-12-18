@@ -5,12 +5,15 @@
         padding-top: 7px;
     }
 </style>
+@php
+    $action = isset($edited) ? '/profile/edit' : '/calas';
+@endphp
 
 <div class="panel panel-default">
     <div class="panel-heading">Form Calon Asisten</div>
 
     <div class="panel-body">
-        <form class="form-horizontal" role="form" method="POST" action="{{ url('/calas') }}" enctype=multipart/form-data style="text-align: left;">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url($action) }}" enctype=multipart/form-data style="text-align: left;">
             {{ csrf_field() }}
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -89,7 +92,7 @@
                 <label for="name" class="col-md-2 control-label">Lab-Minat</label>
 
                 <div class="col-md-5">
-                    {{ Form::select('lab_minat', $lab_minat, isset($calas->lab_minat) ? $calas->lab_minat : old('lab_minat') , ['class'=> 'form-control', 'placeholder' => 'Pilih salah satu']) }}
+                    Form::select('lab_minat', $lab_minat, isset($calas->lab_minat) ? $calas->lab_minat : old('lab_minat') , ['class'=> 'form-control', 'placeholder' => 'Pilih salah satu'])
 
                     @if ($errors->has('lab_minat'))
                         <span class="help-block">
@@ -134,7 +137,7 @@
                     <input type="hidden" name="cv" >
                     <span class="btn btn-success fileinput-button">
                         <i class="glyphicon glyphicon-plus"></i>
-                        <span>Select files...</span>
+                        <span>{{ isset($edited) ? 'Select New CV...' : 'Select file...' }}</span>
                         <!-- The file input field used as target for the file upload widget -->
                         <input id="fileupload" type="file" name="cv" value="{{ old('cv') }}">
                     </span>
@@ -145,7 +148,7 @@
                             <strong>{{ $errors->first('cv') }}</strong>
                         </span>
                     @endif
-                    <span class="help-block" style="color: blue">Format diterima hanya .pdf Contoh file yang diupload bisa dilihat dilink <a target="_BLANK" href="{{ url('cv.pdf') }}">berikut {{ url('cv.pdf') }}</span>
+                    <span class="help-block" style="color: blue">{{ isset($edited) ? 'Tidak perlu pilih CV Baru jika tidak ada perubahan' : '' }}. Format diterima hanya .pdf Contoh file yang diupload bisa dilihat dilink <a target="_BLANK" href="{{ url('cv.pdf') }}">berikut {{ url('cv.pdf') }}</span>
 
                 </div>
             </div>
@@ -153,7 +156,8 @@
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     <button type="submit" class="btn btn-primary">
-                        Daftar Asisten!
+                        {{ isset($edited) ? 'Update Profile' : 'Daftar Asisten!' }}
+
                     </button>
                 </div>
             </div>

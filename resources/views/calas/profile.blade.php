@@ -9,7 +9,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         Data Diri
-        <a href="#" class="btn btn-success btn-xs">
+        <a href="{{ url('/profile/edit') }}" class="btn btn-success btn-xs">
             Edit Data Diri!
         </a>
     </div>
@@ -60,7 +60,8 @@
             <tr>
                 <th width="10%">CV</th>
                 <td width="5%">:</td>
-                <td colspan="4">download CV</td>
+                <td colspan="4">
+                    <a target="_BLANK" href="{{ url($calas->cv) }}" >Download Curriculum Vitae</a> <br>
             </tr>
 
 
@@ -72,7 +73,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         Project E-Commerce
-        <a href="#" class="btn btn-warning btn-xs">
+        <a href="{{ url('/project/edit') }}" class="btn btn-warning btn-xs">
             Edit Project!
         </a>
     </div>
@@ -92,7 +93,12 @@
             <tr>
                 <th width="15%">PPT Project</th>
                 <td width="5%">:</td>
-                <td colspan="4">download PPT</td>
+                <td colspan="4">
+                    @if($user->calas->project_ppt != null)
+                        <a target="_BLANK" href="{{ url($calas->project_ppt) }}">Download PPT Project</a> <br>
+                    @endif
+
+                </td>
             </tr>
         </table>
     </div>

@@ -29,8 +29,8 @@ class CalasRequest extends FormRequest
             //'lab_minat' => 'required',
             'alamat'    => 'required',
             'contact'   => 'required|numeric',
-            'ipk_utama' => 'required|between:0,4.00',
-            'ipk_lokal' => 'required|between:0,4.00',
+            'ipk_utama' => 'required|numeric|between:0,4.00',
+            'ipk_lokal' => 'required|numeric|between:0,4.00',
             'cv'        => 'required|max:10000|mimes:pdf',
         ];
     }

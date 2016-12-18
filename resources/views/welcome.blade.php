@@ -131,7 +131,7 @@
                         <div class="modal-body" style="text-align: left;">
                             <ul>
                                 <li>Login ke akun anda <a href="{{ url('/login') }}" target="_BLANK">di sini</a></li> atau Registrasi untuk mendapatkan akun <a href="{{ url('/register') }}" target="_BLANK">di sini</a></li>
-                                <li>Lengkapi Profile Anda dan Upload CV anda dengan format .pdf yang berisi semua persyaratan adminstratif</li>
+                                <li>Lengkapi Profile Anda dan Upload CV anda dengan format .pdf yang berisi semua persyaratan adminstratif. Format diterima hanya .pdf Contoh file yang diupload bisa dilihat dilink <a target="_BLANK" href="{{ url('cv.pdf') }}">berikut {{ url('cv.pdf') }}</li>
                                 <li>Buat sebuah Project(aplikasi) yang berhubungan dengan E-Commerce</li>
                                 <li>Buat file presentasi (.ppt/.pptx) upload di halaman home Calas (calon asisten)</li>
                                 <li>Pihak Lepkom akan menghubungi peserta Calon Asisten yang lolos tahap seleksi 1 untuk mengikuti test presentasi dan wawancara</li>
